@@ -11,10 +11,12 @@ var buttons = document.getElementsByClassName("Rsearch");
 for (var i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", function() {
         // Scroll to the top of the page
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
+        if (searchListTitle) {
+            searchListTitle.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }
     });
 }
 
