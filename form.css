@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #777;
+}
+
+body {
+    background-image: url(img/form/back.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#mainlogo{
+    margin: 10px;
+    border-radius: 92px;
+    background-color: #ffffffa1;
+    position: absolute;
+    height: 100px;
+    box-shadow: 0px 0px 13px 2px #3694e0;
+}
+@media (max-width:769px){
+    #mainlogo{
+        position: relative;
+    }
+}
+.container {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+#contact {
+    background: #F9F9F9;
+    padding: 25px;
+    margin: 50px 0;
+    border-radius: 10px;
+    box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.5);
+}
+
+#contact h3 {
+    /* color: #F96; */
+    color: #3694e0;
+    font-size: 30px;
+}
+
+#contact h4 {
+    margin: 5px 0 15px;
+    font-size: 13px;
+}
+
+#contact select,
+#contact input,
+#contact textarea {
+    width: 100%;
+    border: 1px solid #CCC;
+    background: #FFF;
+    margin: 0 0 10px;
+    padding: 10px;
+    transition: border-color 0.3s ease-in-out;
+}
+#contact select:hover{
+    border-color: #676161;
+    cursor: pointer;
+}
+#contact input:hover,
+#contact textarea:hover {
+    border-color: #676161;
+}
+#contact textarea {
+    height: 100px;
+    max-width: 100%;
+    resize: none;
+}
+#contact button[type="submit"] {
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    border: none;
+    background: #0CF;
+    color: #FFF;
+    margin: 0 0 10px;
+    padding: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 17px;
+}
+
+#contact button[type="submit"]:hover {
+    background: #09C;
+}
+
+#contact button[type="submit"]:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    border-color: #999;
+    outline: 0;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Recipe - Your taste Our kitchen</title>
+    <link rel="icon" href="icon/logo2/favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="form.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Dancing+Script:wght@400..700&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <a href="index.html"><img id="mainlogo" src="icon/logo+name4.png" alt="logo"></a>
+    <div class="container">
+            <form id="contact" onsubmit="saveFormData()">
+              <h3>Contribute Your Dish</h3>
+              <h4>Submit Your Recipe Details</h4>
+                <input placeholder="Recipe Name" type="text" id="recipe-name" required autofocus>
+                <input placeholder="Description" type="text" id="description" required></textarea>
+                <select name="category" id="cat" required >
+                    <option value="">Select Category</option>
+                    <option value="option1">Breakfast</option>
+                    <option value="option2">Snacks</option>
+                    <option value="option3">Dessert</option>
+                    <option value="option4">Beverage</option>
+                </select>
+                <textarea placeholder="Ingredients" id="ingredients" required></textarea>
+                <textarea placeholder="Instructions to be followed..." id="instruction"  required></textarea>
+                <input type="file" name="image" accept=".jpg, .jpeg" id="image" required>
+            <h3>Your Personal Details</h3>
+            <h4>Some basic info</h4>
+            <input placeholder="Name" type="text" id="name" required>
+            <input placeholder="Email" type="email" id="email" required>
+            <input placeholder="Contact No" type="tel" id="phone" pattern="[0-9]{10}" maxlength="10" title="Please enter a valid contact number in the format 12345-67890" required>
+            <button name="submit" type="submit" id="submit" >Submit</button>
+            </form>
+    </div>
+    <div id="displayData"></div>
+    <script src="form.js"></script>
+</body>
+
+</html>

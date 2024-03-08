@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Crowd Kitchen</title>
+    <link rel="icon" href="icon/logo2/favicon-32x32.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Dancing+Script:wght@400..700&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <header>
+        <div id="toptext"><a href="index.html">
+            <h2>HOME</h2>
+    </a></div>
+    <div id="toptext"><a href="recipies.html">
+        <h2>RECIPES</h2>
+</a></div>
+        <a href="index.html"><img id="mainlogo" src="icon/logo+name4.png" alt="logo"></a>
+        <div id="toptext"><a href="register.html">
+                <h2>REGISTER</h2>
+        </a></div>
+        <div id="toptext"><a href="login.html">
+            <h2>LOGIN</h2>
+    </a></div>
+    </header>
+    <main>
+        <video id="video-background" autoplay muted loop>
+            <source src="video/03.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <section id="text">
+            <h1>ABOUT US</h1>
+            <p>
+               <strong>Your Recipes, Our Community, One Kitchen</strong>
+            </p>
+            <button id="btn1">Know More</button>
+        </section>
+        <section id="bodyText">
+            <div id="missionBox">
+                <div class="box">
+                    <u>
+                        <h2>Our Mission:</h2>
+                    </u>
+                    <p id="mission">Our mission is simple: to make cooking enjoyable, accessible, and rewarding for everyone. We
+                        believe that food has the power to connect people, cultures, and communities, and we're dedicated to
+                        providing a platform where food enthusiasts of all backgrounds can come together to share their love for
+                        cooking and showcase their culinary creations where they truly shine.</p>
+                </div>
+                <div class="box" id="missionImg"></div>
+            </div>
+            <u><h2 id="offerTitle">What We Offer</h2></u>
+            <div id="offerBox">
+                <div class="offer">
+                <h3>Inspiring Recipes:</h3><p> Explore a wide range of mouthwatering recipes curated by our team of culinary experts and passionate home cooks. From quick and easy weeknight dinners to indulgent desserts and everything in between, we've got you covered.</p>
+                </div>    
+                
+                
+                <div class="offer">
+                    <h3>Interactive Experience:</h3><p> Dive into our interactive cooking experiences, where you can follow step-by-step tutorials, watch cooking demos, and interact with fellow food enthusiasts in real time. Learn new skills, discover kitchen hacks, and unleash your inner chef with the help of our supportive community.</p>
+                </div>
+                
+                <div class="offer">
+                <h3>Submit Your Recipes:</h3><p> Have a signature dish that you'd like to share with the world? Submit your own recipes to be featured on our platform and inspire fellow food enthusiasts. It's easy to contribute and connect with others who share your passion for cooking.</p>
+                </div>
+                <div class="offer">
+                    <h3>Login Functionality:</h3><p> Unlock additional features and personalize your experience by creating an account and logging in. With a CrowdKitchen account, you can save your favorite recipes, participate in community discussions, and receive personalized recommendations based on your culinary preferences.</p>
+                </div>
+
+                <div class="offer">
+                <h3>User-Generated Content:</h3><p> Join our vibrant community of food lovers and share your own favorite recipes, cooking tips, and culinary creations. Whether you're showcasing a family heirloom recipe or experimenting with a new twist on a classic dish, your creativity is welcome here.</p>
+                </div>
+            </div>
+            <div id="feedback">
+                <u>
+                    <h2>Feedback</h2>
+                </u>
+                <h4>Let Us Know How We're Doing!</h4>
+                <textarea name="feedback" id="feedBox" cols="70" rows="10"></textarea><br>
+                <button class="submit" id="submit">Submit</button>
+            </div>
+            <div id="missionBox">
+                <div class="box" id="profile"></div>
+                <div class="box" >
+                    <u>
+                        <h2>Ansh Arora</h2>
+                    </u>
+                    <p id="para">Crowd Kitchen, Designed by Ansh Arora, is a solo project dedicated to providing a platform for food enthusiasts to explore a wide range of recipes. With a focus on community and collaboration, users can discover, share, and enjoy delicious recipes together. Crowd Kitchen aims to make cooking accessible and enjoyable for everyone, fostering a vibrant culinary community.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+
+            <a href="index.html"><img src="icon/logo+name4.png" alt="Footer Image" class="footer-image"></a>
+
+            <div class="useful-links">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="recipies.html">Recipes</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="form.html">Add Recipe</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="other-info">
+                <h3>Ansh Arora</h3>
+                <p>Email: example@example.com</p>
+                <p>Phone: +9999999999</p>
+            </div>
+            <div id="copyright">&copy; 2024 Crowd Kitchen. All rights reserved.</div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('btn1').addEventListener('click', function() {
+    var targetElement = document.getElementById('bodyText');
+    targetElement.scrollIntoView({ behavior: 'smooth' });
+});
+
+const submitButton = document.getElementById("submit");
+
+submitButton.addEventListener("click", function() {
+    const feedBox = document.getElementById("feedBox");
+    const feedback = feedBox.value;
+
+    let feedbackArray = JSON.parse(localStorage.getItem('feedbackArray')) || [];
+
+    feedbackArray.push(feedback);
+
+    localStorage.setItem('feedbackArray', JSON.stringify(feedbackArray));
+    feedBox.value = '';
+    alert("Thanks for your feedback!");
+});
+
+
+    </script>
+</body>
+</html>
