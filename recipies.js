@@ -11,6 +11,7 @@ var buttons = document.getElementsByClassName("Rsearch");
 for (var i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", function() {
         // Scroll to the top of the page
+        var searchListTitle = document.getElementById("searchListTitle");
         if (searchListTitle) {
             searchListTitle.scrollIntoView({
                 behavior: "smooth",
