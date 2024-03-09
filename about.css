@@ -85,7 +85,7 @@ header{
     margin-top: 1.5rem;
     color: #3694e0;
     font-size: 20px;
-    margin-top: 260px;
+    margin-top: 300px;
 }
 #text button{
     position: relative;
@@ -263,13 +263,17 @@ main u{
     resize: none;
     border-radius: 2%;
     margin-bottom: 1%;
+    height: 10em;
+    width: 29em;
 }
+
 #feedback textarea:focus{
     
     box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
     border-color: #3694e0;
     outline: none;
 }
+
 #submit{
     position: relative;
     /* margin-left: 20px; */
@@ -301,15 +305,21 @@ main u{
     border: 1px solid #3694e0;
     cursor: pointer;
 }
-
+@media (max-width:450px){
+    #feedback textarea{
+        height: 13em;
+        width: 20em;
+    }
+}
 /* Own Section */
-
 
 #profile{
     background-image: url(img/profile.jpg);
     background-position: center;
     background-size: contain;
     border-radius: 50%;
+    background-repeat: no-repeat;
+    height: 250px;
 }
 #bodyText #para{
     font-size: 1.2em;
