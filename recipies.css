@@ -16,18 +16,27 @@ header{
     justify-content:space-around;
 }
 #mainlogo{
+    /* background-color: rgba(245, 245, 245, 0.534); */
     height: 7em;
     margin-top: 0.5em;
+    border-radius: 100px;
+    /* box-shadow: 0px 0px 13px 2px #3694e0; */
 }
 #toptext{
     margin-right: 2rem;
     height: 7em;
     display: flex;
     align-items: center;
+    border-radius: 10px;
 }
 #toptext h2{
-    font-family: "Bad Script", cursive;
-    letter-spacing: 1px;
+    /* font-family: "Bad Script", cursive; */
+    font-family: "Montserrat", sans-serif;
+    /* letter-spacing: 1px; */
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 28px;
+    /* color: white; */
 }
 #toptext a{
     text-decoration: none;
@@ -35,6 +44,7 @@ header{
 }
 #toptext a:hover{
     color: #3694e0;
+    background-color: rgba(245, 245, 245, 0.534);
 }
 @media (max-width:500px){
     #mainlogo{
@@ -68,6 +78,7 @@ header{
                                                 /* Main Section */
 
 #video-background {
+    filter: blur(4px);
         position: absolute;
         top: 0;
         left: 0;
@@ -97,6 +108,7 @@ main{
 }
 main #Mname{    
     /* font-weight: 600; */
+    /* color: black; */
     font-size: 1.5em;
     padding-top: 2px;
     height: 4.5em;
@@ -104,10 +116,14 @@ main #Mname{
     margin-bottom: 80px;
     margin-right: 40px;
     display: inline-block;
-    /* background-color: rgba(245, 245, 245, 0.422); */
-    border-radius: 45px;
+    /* background-color: rgba(245, 245, 245, 0.215); */
+    border-radius: 35px;
+    box-shadow: 0px 0px 7px 2px #ecf4fc70;
+    
 }
-
+main #Mname h2{
+    color: rgb(255, 255, 255);
+}
 main #infoSearch{
     display: inline-block;
     font-family: "Montserrat", sans-serif;
@@ -149,7 +165,8 @@ main #infoSearch input:focus {
     margin-left: 10px;
     height: 38px;
     padding: 0 20px;
-    color: #555;
+    /* color: #555; */
+    color: black;
     text-align: center;
     font-size: 14px;
     font-weight: 400;
@@ -160,11 +177,13 @@ main #infoSearch input:focus {
     white-space: nowrap;
     background-color: transparent;
     border-radius: 4px;
-    border: 1px solid #bbb;
+    /* border: 1px solid #bbb; */
+    border: 1px solid black;
     cursor: pointer;
     box-sizing: border-box;
     transition: 0.3s;
     z-index: 1;
+    background-color: #3694e0;
 }
 #Bsearch:hover{
     border: 0px;
@@ -333,8 +352,9 @@ main #infoSearch .category div:hover{
     #searchListTitle{
         gap: 2em;
         margin: 10px 0px;
-        top: 230px;
+        top: 14em;
         margin-bottom: 11em;
+        margin-top: 20em;
     }
     #searchListTitle .curveTitle{
         font-size:1em;
@@ -344,7 +364,11 @@ main #infoSearch .category div:hover{
         padding: 0px;
     }
 }
-
+@media (max-width:350px){
+    #searchListTitle{
+        top: 5em;
+    }
+}
 
         /*                       Recipes List                   */
 
